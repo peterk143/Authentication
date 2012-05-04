@@ -21,7 +21,6 @@ public class HttpsBasicAuth {
 	  		  SSLContext sc = SSLContext.getInstance("SSL");
 	  		  sc.init(null, trusteds, new SecureRandom());
 	  		  HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
-	  		  System.out.println("disabled");
 	  	  } catch (Exception e) {
 	  		  System.out.println("oops");
 	  		  e.printStackTrace();
@@ -60,6 +59,7 @@ public class HttpsBasicAuth {
   	      }
   	      public void checkClientTrusted(X509Certificate[] certs, String authType) {}
   	      public void checkServerTrusted(X509Certificate[] certs, String authType) {}}};
+  	  System.out.println("disabled");
   	  return trustAllCerts;
     }
 }
